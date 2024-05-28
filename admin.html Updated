@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportify: Consultation Sportive - Admin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #191414;
+            color: white;
+        }
+        .wrapper {
+            width: 100%;
+            margin: 0 auto;
+        }
+        header {
+            background-color: #191414;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            border-bottom: 2px solid #1DB954;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: white;
+        }
+        header span {
+            color: #1DB954;
+        }
+        nav {
+            background-color: #282828;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #1DB954;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #1ed760;
+        }
+        .content {
+            padding: 50px;
+            color: white;
+        }
+        .event-section, .bulletin-section {
+            margin-bottom: 30px;
+        }
+        .event-section h2, .bulletin-section h2 {
+            color: #1DB954;
+            margin-bottom: 10px;
+        }
+        .carousel, .bulletin {
+            background-color: #282828;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            background-color: #282828;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 2px solid #1DB954;
+            color: #b3b3b3;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+        }
+        .map {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1><span>Sportify:</span> Consultation Sportive - Admin</h1>
+            <img src="logo.jpg" alt="Sportify Logo" class="logo">
+        </header>
+        <nav>
+            <a href="Page_Selection.html">Accueil</a>
+            <a href="#">Tout Parcourir</a>
+            <a href="#">Recherche</a>
+            <a href="#">Rendez-vous</a>
+            <a href="#">Votre Compte</a>
+            <a href="Page_NoLogin.html">Déconnexion</a>
+        </nav>
+        <div class="content">
+            <div class="event-section">
+                <h2>Evènement de la semaine</h2>
+                <div class="carousel">
+                    <p>Découvrez l'évènement marquant de la semaine : un match de rugby entre Omnes Education vs. Visiteurs, une rencontre avec le coach et joueurs de tennis, etc.</p>
+                </div>
+            </div>
+            <div class="bulletin-section">
+                <h2>Bulletin Sportif de la semaine</h2>
+                <div class="bulletin">
+                    <p>Les dernières nouvelles importantes liées aux évènements sportifs. Par exemple, une compétition sportive collégiale, une exhibition des joueurs olympiques, etc.</p>
+                </div>
+            </div>
+            <div class="map">
+                <h2>Localisation</h2>
+                <div>
+                    <p>Retrouvez-nous sur Google Maps pour voir l'adresse physique de Sportify.</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.912635133455!2d2.292292315674342!3d48.84935697928709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d84bce751b%3A0x40b82c3688c9460!2s15%20Rue%20Sextius%20Michel%2C%2075015%20Paris%2C%20France!5e0!3m2!1sen!2sus!4v1627814719123!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Contactez-nous par mail, téléphone, ou visitez-nous à notre adresse physique.</p>
+        </footer>
+    </div>
+</body>
+</html>
