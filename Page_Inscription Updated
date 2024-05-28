@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportify: Inscription</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #191414;
+            color: white;
+        }
+        .wrapper {
+            width: 100%;
+            margin: 0 auto;
+        }
+        header {
+            background-color: #191414;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            border-bottom: 2px solid #1DB954;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: white;
+        }
+        header span {
+            color: #1DB954;
+        }
+        nav {
+            background-color: #282828;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #1DB954;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #1ed760;
+        }
+        .form-container {
+            padding: 50px;
+            text-align: center;
+            color: white;
+        }
+        .form-container h2 {
+            color: #1DB954;
+            margin-bottom: 20px;
+        }
+        .form-container form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #1DB954;
+            border-radius: 5px;
+            background-color: #282828;
+            color: white;
+        }
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 20px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #1DB954;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #1ed760;
+        }
+        footer {
+            background-color: #282828;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 2px solid #1DB954;
+            color: #b3b3b3;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1><span>Sportify:</span> Inscription</h1>
+        </header>
+        <nav>
+            <a href="Page_NoLogin.html">Accueil</a>
+            <a href="Page_Connexion.html">Connexion</a>
+        </nav>
+        <div class="form-container">
+            <h2>Inscription</h2>
+            <form action="inscription.php" method="POST">
+                <input type="text" name="Nom/Prénom" placeholder="Nom/Prénom" required>
+                <input type="email" name="email" placeholder="Adresse Email" required>
+                <input type="text" name="adresse" placeholder="Adresse Postale" required>
+                <input type="text" name="password" placeholder="Mot de passe" required>
+                <input type="number" name="etudiant" placeholder="Carte Etudiant" required>
+                <input type="submit" value="S'inscrire">
+            </form>
+        </div>
+        <footer>
+            FOOTER
+        </footer>
+    </div>
+</body>
+</html>
