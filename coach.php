@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['email'])) {
+    header("Location: Page_Connexion.html");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -84,6 +93,14 @@
         .map {
             margin-top: 20px;
         }
+        .verification {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #1DB954;
+            border-radius: 5px;
+            text-align: center;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -93,14 +110,21 @@
             <img src="logo.jpg" alt="Sportify Logo" class="logo">
         </header>
         <nav>
-            <a href="Page_Selection.html">Accueil</a>
+            <a href="coach.php">Accueil</a>
             <a href="#">Tout Parcourir</a>
             <a href="#">Recherche</a>
             <a href="#">Rendez-vous</a>
-            <a href="#">Votre Compte</a>
+            <a href="compte_coach.php">Votre Compte</a>
             <a href="Page_NoLogin.html">Déconnexion</a>
         </nav>
         <div class="content">
+            <div class="verification">
+                <?php if (isset($_SESSION['email'])): ?>
+                    Le mail du compte connecté est : <?php echo htmlspecialchars($_SESSION['email']); ?>
+                <?php else: ?>
+                    Aucun compte connecté.
+                <?php endif; ?>
+            </div>
             <div class="event-section">
                 <h2>Evènement de la semaine</h2>
                 <div class="carousel">
