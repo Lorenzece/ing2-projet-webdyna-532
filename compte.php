@@ -136,7 +136,7 @@ $conn_paiement->close();
             <h1>Votre Compte - Client</h1>
         </header>
         <nav>
-            <a href="Page_Selection.html">Accueil</a>
+            <a href="client.php">Accueil</a>
             <a href="Page_NoLogin.html">Déconnexion</a>
         </nav>
         <div class="content">
