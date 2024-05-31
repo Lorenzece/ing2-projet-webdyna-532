@@ -19,23 +19,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $pass = $_POST['password'];
 
-    $sql = "SELECT role FROM login WHERE email = ? AND password = ?";
+    $sql = "SELECT id, role FROM login WHERE email = ? AND password = ?";
     $stmt = $conn->prepare($sql);
     if ($stmt === false) {
         die("Erreur de préparation de la requête: " . $conn->error);
     }
     $stmt->bind_param("ss", $email, $pass);
     $stmt->execute();
-    $stmt->bind_result($role);
+    $stmt->bind_result($user_id, $role);
     $stmt->fetch();
     $stmt->close();
 
     if ($role) {
         $_SESSION['email'] = $email;
+        $_SESSION['user_id'] = $user_id; 
+        $_SESSION['role'] = $role;
         if ($role == 'coach') {
             echo "<script>window.location.href='coach.php';</script>";
         } elseif ($role == 'admin') {
-            echo "<script>window.location.href='admin.html';</script>";
+            echo "<script>window.location.href='admin.php';</script>";
         } else {
             echo "<script>window.location.href='client.php';</script>";
         }
