@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($role == 'coach') {
             echo "<script>window.location.href='coach.php';</script>";
         } elseif ($role == 'admin') {
-            echo "<script>window.location.href='admin.html';</script>";
+            echo "<script>window.location.href='admin.php';</script>";
         } else {
             echo "<script>window.location.href='client.php';</script>";
         }
