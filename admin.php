@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['email'])) {
+    header("Location: Page_Connexion.html");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -93,11 +102,10 @@
             <img src="logo.jpg" alt="Sportify Logo" class="logo">
         </header>
         <nav>
-            <a href="Page_Selection.html">Accueil</a>
-            <a href="#">Tout Parcourir</a>
-            <a href="#">Recherche</a>
-            <a href="#">Rendez-vous</a>
-            <a href="#">Votre Compte</a>
+            <a href="parcourir.html">Tout Parcourir</a>
+            <a href="Page_Recherche2.html">Recherche</a>
+            <a href="rendez-vous.php">Rendez-vous</a>
+            <a href="compte_admin.php">Votre Compte</a>
             <a href="Page_NoLogin.html">Déconnexion</a>
         </nav>
         <div class="content">
